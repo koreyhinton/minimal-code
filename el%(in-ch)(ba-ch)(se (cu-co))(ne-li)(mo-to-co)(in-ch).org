@@ -1,0 +1,30 @@
+(progn
+  (insert-char 124)
+  (backward-char)
+  (setq cc (current-column))
+  (next-line)
+  (move-to-column cc)
+  (insert-char 124)
+)
+      
+(progn
+  (setq i 0)
+  (while (< i 3)
+    (next-line)
+    (move-to-column (* 3 i))
+    (insert-char 124)
+    (backward-char)
+    (setq cc (current-column))
+    (next-line)
+    (move-to-column cc)
+    (insert-char 124)
+    (setq i (1+ i))
+    (previous-line)
+    (previous-line)
+  )
+  (next-line)
+  (move-to-column 1)
+  (org-table-align)
+)
+a b
+c d

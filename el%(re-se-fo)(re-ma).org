@@ -1,0 +1,16 @@
+(progn
+  (re-search-forward "\| " nil t)
+  (replace-match "")
+)
+ | |
+
+(progn
+  (while (re-search-forward "\| " nil t) (replace-match ""))
+  (forward-line -1)
+  (forward-line -1)
+  (forward-line -1)
+  (while (re-search-forward " \|" nil t) (replace-match ""))
+)
+| 1 | csv |
+| 2 | pdf |
+| 3 | txt |
