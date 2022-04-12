@@ -1,0 +1,9 @@
+(progn
+  (beginning-of-line)
+  (delete-char 1)
+  (insert "* ")
+  (end-of-line)
+  (delete-backward-char 1)
+)
+_test_
+;; place cursor over the first '_' to execute

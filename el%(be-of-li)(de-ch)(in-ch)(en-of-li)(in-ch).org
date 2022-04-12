@@ -1,0 +1,24 @@
+(progn
+  (beginning-of-line)
+  (delete-char 2)
+  (insert-char 95)
+  (end-of-line)
+  (insert-char 95)
+) 
+* test
+;; place cursor over the '*' to execute
+
+(progn
+  (next-line)
+  (beginning-of-line)
+  (while (= (following-char) 42)
+    (delete-char 1)
+    (beginning-of-line)
+  )
+  (delete-char 1)
+  (insert-char 95)
+  (end-of-line)
+  (insert-char 95)
+)
+** test
+;; place cursor after the last ')' to execute
